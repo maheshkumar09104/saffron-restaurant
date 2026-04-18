@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ShoppingCart, LogOut, User } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
-import CartSidebar from "./Cartsidebar";
+import CartSidebar from "./CartSidebar";
 
 export default function Navbar() {
   const { totalItems } = useCart();
