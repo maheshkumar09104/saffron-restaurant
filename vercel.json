@@ -19,8 +19,8 @@
       "dest": "server/index.js"
     },
     {
-      "src": "^/((?!api/).*)",
-      "dest": "/client/dist/index.html"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
