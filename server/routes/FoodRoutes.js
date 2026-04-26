@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
-import { protect } from "../middleware/authMiddleware.js";
-import { getAllFoods, getFoodById, createFood, updateFood, deleteFood } from "../controllers/foodController.js";
+import { protect } from "../middleware/AuthMiddleware.js";
+import { getAllFoods, getFoodById, createFood, updateFood, deleteFood } from "../controllers/FoodController.js";
 
 const router = express.Router();
 

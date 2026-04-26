@@ -1,25 +1,13 @@
-version: "3"
+# Build stage
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 
-services:
-
-  mongo:
-    image: mongo
-    container_name: mongo-db
-    ports:
-      - "27017:27017"
-
-  server:
-    build: ./server
-    container_name: backend
-    ports:
-      - "5000:5000"
-    depends_on:
-      - mongo
-
-  client:
-    build: ./client
-    container_name: frontend
-    ports:
-      - "5173:5173"
-    depends_on:
-      - server
+# Serve stage
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

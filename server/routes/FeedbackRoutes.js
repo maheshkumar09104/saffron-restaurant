@@ -1,6 +1,6 @@
 import express from "express";
-import { submitFeedback, getAllFeedback, markAsRead } from "../controllers/feedbackController.js";
-import { protect } from "../middleware/authMiddleware.js";
+import { submitFeedback, getAllFeedback, markAsRead } from "../controllers/FeedbackController.js";
+import { protect } from "../middleware/AuthMiddleware.js";
 
 const router = express.Router();
 

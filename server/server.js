@@ -2,11 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
-import foodRoutes from "./routes/foodRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
-import authRoutes from "./routes/authRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
-import feedbackRoutes from "./routes/feedbackRoutes.js";
+import foodRoutes from "./routes/FoodRoutes.js";
+import orderRoutes from "./routes/OrderRoutes.js";
+import authRoutes from "./routes/AuthRoutes.js";
+import userRoutes from "./routes/UserRoutes.js";
+import feedbackRoutes from "./routes/FeedbackRoutes.js";
 
 dotenv.config();
 connectDB();

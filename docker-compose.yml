@@ -1,25 +1,29 @@
-version: "3"
 
 services:
-
-  mongo:
-    image: mongo
-    container_name: mongo-db
+  client:
+    build: ./client
     ports:
-      - "27017:27017"
+      - "3000:80"
+    depends_on:
+      - server
 
   server:
     build: ./server
-    container_name: backend
     ports:
-      - "5000:5000"
+      - "5001:5000"
+    env_file:
+      - .env
+    environment:
+      - MONGO_URI=${MONGO_URI}
     depends_on:
       - mongo
 
-  client:
-    build: ./client
-    container_name: frontend
+  mongo:
+    image: mongo:6
     ports:
-      - "5173:5173"
-    depends_on:
-      - server
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
