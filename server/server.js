@@ -21,7 +21,9 @@ app.use("/api/foods",    foodRoutes);
 app.use("/api/orders",   orderRoutes);
 app.use("/api/users",    userRoutes);
 app.use("/api/feedback", feedbackRoutes);
-
+app.use(cors({
+  origin: ["https://saffron-restaurant-1.onrender.com", "http://localhost:5173"]
+}));
 app.get("/", (req, res) => res.send("Saffron API running ✅"));
 
 const PORT = process.env.PORT || 5000;
