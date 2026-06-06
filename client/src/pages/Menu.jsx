@@ -62,7 +62,7 @@ export default function Menu() {
             {/* Food Image */}
             <div style={{ width: "100%", height: "180px", background: "rgba(232,99,26,0.08)", overflow: "hidden", position: "relative" }}>
               <img
-                src={`${SERVER}/uploads/${food.image}?t=${food.updatedAt}`}
+                src={food.image?.startsWith("http") ? `${food.image}?t=${food.updatedAt}` : `${SERVER}/uploads/${food.image}?t=${food.updatedAt}`}
                 alt={food.name}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 onError={(e) => {
