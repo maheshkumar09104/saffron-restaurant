@@ -25,7 +25,7 @@ export const getFoodById = async (req, res) => {
 export const createFood = async (req, res) => {
   try {
     const { name, description, price, category } = req.body;
-    const image = req.file?.filename; // filename from multer upload
+    const image = req.file?.path; // filename from multer upload
 
     if (!image) return res.status(400).json({ message: "Image is required" });
 
@@ -43,7 +43,7 @@ export const updateFood = async (req, res) => {
 
     // If new image uploaded, use it
     if (req.file) {
-      updateData.image = req.file.filename;
+      updateData.image = req.file.path;
     }
 
     const food = await Food.findByIdAndUpdate(req.params.id, updateData, { new: true });
