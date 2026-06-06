@@ -59,7 +59,7 @@ export default function AdminDashboard() {
   const handleEdit = (food) => {
     setEditId(food._id);
     setForm({ name: food.name, description: food.description, price: food.price, category: food.category });
-    setPreview(`${SERVER}/uploads/${food.image}`);
+    setPreview(food.image?.startsWith("http") ? food.image : `${SERVER}/uploads/${food.image}`);
     setTab("menu");
     window.scrollTo(0, 0);
   };
@@ -186,7 +186,7 @@ export default function AdminDashboard() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "1.5rem" }}>
               {foods.map((food) => (
                 <div key={food._id} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", overflow: "hidden" }}>
-                  <img src={`${SERVER}/uploads/${food.image}?t=${Date.now()}`} alt={food.name}
+                  <img src={food.image?.startsWith("http") ? food.image : `${SERVER}/uploads/${food.image}?t=${Date.now()}`} alt={food.name}
                     style={{ width: "100%", height: "160px", objectFit: "cover" }}
                     onError={(e) => { e.target.style.display = "none"; }} />
                   <div style={{ padding: "1rem" }}>
