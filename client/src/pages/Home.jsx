@@ -11,14 +11,7 @@ export default function Home() {
       justifyContent: "center",
       position: "relative",
     }}>
-      {/* Dark overlay */}
-      <div style={{
-        position: "absolute",
-        inset: 0,
-        background: "rgba(0,0,0,0.6)",
-      }} />
-
-      {/* Content */}
+      <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.6)" }} />
       <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
         <h1 style={{ fontFamily: "serif", fontSize: "3.5rem", color: "#C9A84C", marginBottom: "1rem" }}>
           Welcome to Saffron
@@ -27,13 +20,8 @@ export default function Home() {
           Authentic Indian Cuisine
         </p>
         <a href="/menu" style={{
-          background: "#E8631A",
-          color: "white",
-          padding: "0.85rem 2.5rem",
-          borderRadius: "100px",
-          textDecoration: "none",
-          fontSize: "1rem",
-          fontWeight: "500",
+          background: "#E8631A", color: "white", padding: "0.85rem 2.5rem",
+          borderRadius: "100px", textDecoration: "none", fontSize: "1rem", fontWeight: "500",
         }}>
           View Menu
         </a>
