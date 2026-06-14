@@ -30,18 +30,28 @@ export default function App() {
               },
             }}
           />
-          <Routes>
-            <Route path="/"              element={<><Navbar /><Home /></>} />
-            <Route path="/menu"          element={<><Navbar /><Menu /></>} />
-            <Route path="/cart"          element={<><Navbar /><Cart /></>} />
-            <Route path="/contact"       element={<><Navbar /><Contact /></>} />
-            <Route path="/feedback"      element={<><Navbar /><Feedback /></>} />
-            <Route path="/login"         element={<Login />} />
-            <Route path="/payment"       element={<Payment />} />
-            <Route path="/order-success" element={<><Navbar /><OrderSuccess /></>} />
-            <Route path="/admin/login"   element={<AdminLogin />} />
-            <Route path="/admin"         element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-          </Routes>
+          <div style={{
+            minHeight: "100vh",
+            backgroundImage: "url('/bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}>
+            <div style={{ minHeight: "100vh", background: "rgba(0,0,0,0.75)" }}>
+              <Routes>
+                <Route path="/"              element={<><Navbar /><Home /></>} />
+                <Route path="/menu"          element={<><Navbar /><Menu /></>} />
+                <Route path="/cart"          element={<><Navbar /><Cart /></>} />
+                <Route path="/contact"       element={<><Navbar /><Contact /></>} />
+                <Route path="/feedback"      element={<><Navbar /><Feedback /></>} />
+                <Route path="/login"         element={<Login />} />
+                <Route path="/payment"       element={<Payment />} />
+                <Route path="/order-success" element={<><Navbar /><OrderSuccess /></>} />
+                <Route path="/admin/login"   element={<AdminLogin />} />
+                <Route path="/admin"         element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+              </Routes>
+            </div>
+          </div>
         </BrowserRouter>
       </CartProvider>
     </AuthProvider>
