@@ -106,7 +106,7 @@ export default function AdminDashboard() {
   const unreadCount = feedbacks.filter(f => f.status === "unread").length;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#120d04" }}>
+    <div style={{ minHeight: "100vh", background: "transparent" }}>
 
       {/* Admin Navbar */}
       <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1rem 2rem", borderBottom: "1px solid rgba(255,255,255,0.08)", background: "rgba(26,18,8,0.98)" }}>

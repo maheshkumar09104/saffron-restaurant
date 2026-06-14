@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ShoppingCart, LogOut, User } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
@@ -10,6 +10,7 @@ export default function Navbar() {
   const { user, logout } = useAuth();
   const [cartOpen, setCartOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -19,19 +20,28 @@ export default function Navbar() {
   return (
     <>
       <nav style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 2.5rem", borderBottom: "1px solid rgba(201,168,76,0.15)", background: "rgba(26,18,8,0.95)", backdropFilter: "blur(10px)" }}>
-
         <Link to="/" style={{ fontFamily: "serif", fontSize: "1.6rem", fontWeight: "900", color: "#C9A84C", textDecoration: "none" }}>
           Saffron<span style={{ color: "#E8631A" }}>.</span>
         </Link>
-
         <div style={{ display: "flex", gap: "2rem" }}>
-          {[["Home", "/"], ["Menu", "/menu"], ["Feedback", "/feedback"], ["Contact", "/contact"]].map(([label, path]) => (
-            <Link key={path} to={path} style={{ color: "rgba(253,246,236,0.6)", textDecoration: "none", fontSize: "0.8rem", letterSpacing: "1px", textTransform: "uppercase" }}>
-              {label}
-            </Link>
-          ))}
+          {[["Home", "/"], ["Menu", "/menu"], ["Feedback", "/feedback"], ["Contact", "/contact"]].map(([label, path]) => {
+            const isActive = location.pathname === path;
+            return (
+              <Link key={path} to={path} style={{
+                color: isActive ? "#E8631A" : "rgba(253,246,236,0.6)",
+                textDecoration: "none",
+                fontSize: "0.8rem",
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                paddingBottom: "6px",
+                borderBottom: isActive ? "2px solid #E8631A" : "2px solid transparent",
+                transition: "all 0.2s",
+              }}>
+                {label}
+              </Link>
+            );
+          })}
         </div>
-
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           {user ? (
             <>
@@ -47,7 +57,6 @@ export default function Navbar() {
               Login
             </Link>
           )}
-
           <button onClick={() => setCartOpen(true)}
             style={{ position: "relative", display: "flex", alignItems: "center", gap: "8px", background: "#E8631A", color: "white", border: "none", padding: "0.6rem 1.2rem", borderRadius: "100px", cursor: "pointer", fontSize: "0.85rem" }}>
             <ShoppingCart size={16} />
