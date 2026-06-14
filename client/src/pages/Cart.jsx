@@ -65,7 +65,7 @@ export default function Cart() {
             <input key={field} type={type} placeholder={placeholder} required
               value={form[field]}
               onChange={(e) => setForm({ ...form, [field]: e.target.value })}
-              style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: "12px", padding: "0.85rem 1rem", color: "white", fontSize: "0.9rem", outline: "none" }}
+              style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: "12px", padding: "0.85rem 1rem", color: "white", fontSize: "0.9rem", outline: "none" }}
             />
           ))}
           <button type="submit"

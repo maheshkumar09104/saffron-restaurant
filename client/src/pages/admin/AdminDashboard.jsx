@@ -139,7 +139,7 @@ export default function AdminDashboard() {
         {/* ── MENU TAB ── */}
         {tab === "menu" && (
           <div>
-            <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", padding: "2rem", marginBottom: "2.5rem" }}>
+            <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", padding: "2rem", marginBottom: "2.5rem" }}>
               <h2 style={{ fontFamily: "serif", color: "#C9A84C", marginBottom: "1.5rem", fontSize: "1.3rem" }}>
                 {editId ? "✏️ Edit Food Item" : "➕ Add New Food Item"}
               </h2>
@@ -185,7 +185,7 @@ export default function AdminDashboard() {
             <h2 style={{ fontFamily: "serif", color: "#C9A84C", marginBottom: "1.5rem" }}>All Menu Items ({foods.length})</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "1.5rem" }}>
               {foods.map((food) => (
-                <div key={food._id} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", overflow: "hidden" }}>
+                <div key={food._id} style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", overflow: "hidden" }}>
                   <img src={food.image?.startsWith("http") ? food.image : `${SERVER}/uploads/${food.image}?t=${Date.now()}`} alt={food.name}
                     style={{ width: "100%", height: "160px", objectFit: "cover" }}
                     onError={(e) => { e.target.style.display = "none"; }} />
@@ -216,7 +216,7 @@ export default function AdminDashboard() {
             <h2 style={{ fontFamily: "serif", color: "#C9A84C", marginBottom: "1.5rem" }}>All Orders ({orders.length})</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
               {orders.map((order) => (
-                <div key={order._id} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "1.5rem" }}>
+                <div key={order._id} style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "16px", padding: "1.5rem" }}>
 
                   {/* Order Header */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1rem" }}>
@@ -312,7 +312,7 @@ export default function AdminDashboard() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {feedbacks.map((fb) => (
                 <div key={fb._id}
-                  style={{ background: fb.status === "unread" ? "rgba(232,99,26,0.06)" : "rgba(255,255,255,0.03)", border: `1px solid ${fb.status === "unread" ? "rgba(232,99,26,0.2)" : "rgba(255,255,255,0.07)"}`, borderRadius: "16px", padding: "1.5rem" }}>
+                  style={{ background: fb.status === "unread" ? "rgba(232,99,26,0.06)" : "rgba(20,14,6,0.92)", border: `1px solid ${fb.status === "unread" ? "rgba(232,99,26,0.2)" : "rgba(255,255,255,0.07)"}`, borderRadius: "16px", padding: "1.5rem" }}>
 
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem" }}>
                     <div>
@@ -337,7 +337,7 @@ export default function AdminDashboard() {
                     </div>
                   </div>
 
-                  <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1rem", background: "rgba(255,255,255,0.03)", padding: "0.75rem", borderRadius: "10px" }}>
+                  <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.88rem", lineHeight: "1.6", marginBottom: "1rem", background: "rgba(20,14,6,0.92)", padding: "0.75rem", borderRadius: "10px" }}>
                     "{fb.message}"
                   </p>
 
@@ -362,7 +362,7 @@ export default function AdminDashboard() {
 
 // Helper styles
 const inputStyle = {
-  background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
+  background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.12)",
   borderRadius: "12px", padding: "0.85rem 1rem", color: "white",
   fontSize: "0.9rem", outline: "none", width: "100%",
 };
@@ -387,3 +387,4 @@ const statusEmoji = (s) => ({
 
 const typeColor = (t) => ({ suggestion: "#3b82f6", compliment: "#22c55e", complaint: "#ef4444", other: "#C9A84C" }[t]);
 const typeEmoji = (t) => ({ suggestion: "💡", compliment: "👏", complaint: "⚠️", other: "📝" }[t]);
+

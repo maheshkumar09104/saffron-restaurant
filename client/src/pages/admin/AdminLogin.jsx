@@ -21,7 +21,7 @@ export default function AdminLogin() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
-      <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "380px" }}>
+      <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "380px" }}>
 
         {/* Logo */}
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -54,7 +54,7 @@ export default function AdminLogin() {
 
         {/* Back to Customer Login */}
         <Link to="/login"
-          style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "0.75rem", textDecoration: "none", color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", transition: "all 0.2s" }}
+          style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "12px", padding: "0.75rem", textDecoration: "none", color: "rgba(255,255,255,0.5)", fontSize: "0.85rem", transition: "all 0.2s" }}
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "rgba(232,99,26,0.4)"}
           onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"}
         >
@@ -71,7 +71,7 @@ export default function AdminLogin() {
 
 const inputStyle = {
   width: "100%",
-  background: "rgba(255,255,255,0.05)",
+  background: "rgba(20,14,6,0.92)",
   border: "1px solid rgba(255,255,255,0.12)",
   borderRadius: "12px",
   padding: "0.85rem 1rem",

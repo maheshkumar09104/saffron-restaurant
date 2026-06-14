@@ -6,15 +6,15 @@ export default function Contact() {
       </h1>
 
       <div style={{ display: "grid", gap: "1.5rem", marginBottom: "3rem" }}>
-        <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
+        <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Address</p>
           <p style={{ marginTop: "0.5rem" }}>Anna Nagar, Chennai, Tamil Nadu</p>
         </div>
-        <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
+        <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Phone</p>
           <p style={{ marginTop: "0.5rem" }}>+91 98765 43210</p>
         </div>
-        <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
+        <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", padding: "1.5rem" }}>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>Hours</p>
           <p style={{ marginTop: "0.5rem" }}>Monday – Sunday: 11am to 11pm</p>
         </div>

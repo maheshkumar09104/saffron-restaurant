@@ -77,7 +77,7 @@ export default function Feedback() {
                 style={{
                   padding: "0.5rem 1.2rem", borderRadius: "100px", cursor: "pointer",
                   fontSize: "0.82rem", textTransform: "capitalize", transition: "all 0.2s",
-                  background: form.type === t ? typeColor(t) : "rgba(255,255,255,0.05)",
+                  background: form.type === t ? typeColor(t) : "rgba(20,14,6,0.92)",
                   color: form.type === t ? "white" : "rgba(255,255,255,0.5)",
                   border: `1px solid ${form.type === t ? typeColor(t) : "rgba(255,255,255,0.1)"}`,
                 }}>
@@ -120,7 +120,7 @@ export default function Feedback() {
 }
 
 const inputStyle = {
-  width: "100%", background: "rgba(255,255,255,0.05)",
+  width: "100%", background: "rgba(20,14,6,0.92)",
   border: "1px solid rgba(255,255,255,0.12)", borderRadius: "12px",
   padding: "0.85rem 1rem", color: "white", fontSize: "0.9rem", outline: "none",
 };

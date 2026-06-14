@@ -32,7 +32,7 @@ export default function Login() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
-      <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "420px" }}>
+      <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "420px" }}>
 
         {/* Logo */}
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -99,7 +99,7 @@ export default function Login() {
 }
 
 const inputStyle = {
-  width: "100%", background: "rgba(255,255,255,0.05)",
+  width: "100%", background: "rgba(20,14,6,0.92)",
   border: "1px solid rgba(255,255,255,0.12)", borderRadius: "12px",
   padding: "0.85rem 1rem", color: "white", fontSize: "0.9rem",
   outline: "none",

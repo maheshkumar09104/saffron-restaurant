@@ -30,7 +30,7 @@ export default function Payment() {
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
-      <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "420px", textAlign: "center" }}>
+      <div style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "20px", padding: "2.5rem", width: "100%", maxWidth: "420px", textAlign: "center" }}>
 
         <h1 style={{ fontFamily: "serif", fontSize: "1.8rem", color: "#C9A84C", marginBottom: "0.5rem" }}>
           Complete Payment
@@ -50,7 +50,7 @@ export default function Payment() {
         </div>
 
         {/* UPI ID */}
-        <div style={{ background: "rgba(255,255,255,0.05)", borderRadius: "12px", padding: "1rem", marginBottom: "1.5rem" }}>
+        <div style={{ background: "rgba(20,14,6,0.92)", borderRadius: "12px", padding: "1rem", marginBottom: "1.5rem" }}>
           <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.75rem" }}>UPI ID</p>
           <p style={{ color: "#C9A84C", fontSize: "1rem", fontWeight: "500", marginTop: "0.3rem" }}>
             {UPI_ID}

@@ -55,7 +55,7 @@ export default function Menu() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1.5rem", maxWidth: "1200px", margin: "0 auto" }}>
         {filtered.map((food) => (
           <div key={food._id}
-            style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", overflow: "hidden", transition: "transform 0.3s", cursor: "pointer" }}
+            style={{ background: "rgba(20,14,6,0.92)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "20px", overflow: "hidden", transition: "transform 0.3s", cursor: "pointer" }}
             onMouseEnter={(e) => e.currentTarget.style.transform = "translateY(-6px)"}
             onMouseLeave={(e) => e.currentTarget.style.transform = "translateY(0)"}>
 
@@ -99,3 +99,4 @@ export default function Menu() {
     </div>
   );
 }
+
